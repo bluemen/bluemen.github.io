@@ -23,6 +23,8 @@ $(document).ready(function(){
 	});
 
 	$("#plus").click(function(e){
-		firebase.child("x").set(firebase.child("x").val().x);
+		firebase.once("value",function(snapshot){
+			firebase.child("x").set(snapshot.val().x+1);
+		})
 	});
 })
