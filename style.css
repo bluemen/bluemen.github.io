@@ -1,0 +1,41 @@
+.bigbut{
+	padding:16px;
+	outline:none;
+	background-color:#2ecc71;
+	border:none;
+	border-bottom:4px solid #1ebc61;
+	border-top:0px solid transparent;
+}
+
+.bigbut:hover{
+	background-color:#3edc81;
+}
+
+.bigbut:active{
+	border-bottom:0px solid transparent;
+	transform: translateY(4px);
+}
+/*
+#xplus:active{
+	border-top:4px solid white;
+	border-bottom: 0px solid transparent;
+	position:relative;
+}
+
+#xminus:active{
+	border-top:4px solid white;
+	border-bottom: 0px solid transparent;
+	position:relative;
+}
+
+#yplus:active{
+	border-top:4px solid white;
+	border-bottom: 0px solid transparent;
+	position:relative;
+}
+
+#yminus:active{
+	border-top:4px solid white;
+	border-bottom: 0px solid transparent;
+	position:relative;
+}*/

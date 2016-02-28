@@ -14,4 +14,24 @@ $(document).ready(function(){
 	// 	e.preventDefault();
 	// 	firebase.remove();
 	// })
+	$("#xplus").click(function(e){
+		firebase.once("value",function(snapshot){
+			firebase.child("x").set(snapshot.val().x+1);
+		})
+	});
+	$("#xminus").click(function(e){
+		firebase.once("value",function(snapshot){
+			firebase.child("x").set(snapshot.val().x-1);
+		})
+	});
+	$("#yplus").click(function(e){
+		firebase.once("value",function(snapshot){
+			firebase.child("y").set(snapshot.val().y+1);
+		})
+	});
+	$("#yminus").click(function(e){
+		firebase.once("value",function(snapshot){
+			firebase.child("y").set(snapshot.val().y-1);
+		})
+	});
 })
