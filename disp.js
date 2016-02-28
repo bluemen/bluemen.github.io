@@ -21,4 +21,8 @@ $(document).ready(function(){
 			update(thing);
 		});
 	});
+
+	$("#plus").click(function(e){
+		firebase.child("x").set(firebase.child("x").val().x);
+	});
 })
