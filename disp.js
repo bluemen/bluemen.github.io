@@ -12,7 +12,7 @@ $(document).ready(function(){
 	});
 
 	$("#removeall").click(function(e){
-		$("</p>").remove();
+		$("#placeholder").empty();
 	})
 
 	
