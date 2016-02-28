@@ -13,7 +13,12 @@ $(document).ready(function(){
 
 	$("#removeall").click(function(e){
 		$("#placeholder").empty();
-	})
+	});
 
-	
+	$("#x").click(function(e){
+		firebase.once("value",function(snapshot){
+			var thing = snapshot.val();
+			update(thing);
+		});
+	});
 })
