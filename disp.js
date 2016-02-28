@@ -11,5 +11,9 @@ $(document).ready(function(){
 		update(input);
 	});
 
+	$("#removeall").click(function(e){
+		$("</p>").remove();
+	})
+
 	
 })
