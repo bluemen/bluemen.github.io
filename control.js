@@ -14,6 +14,7 @@ $(document).ready(function(){
 	// 	e.preventDefault();
 	// 	firebase.remove();
 	// })
+	
 	$("#xplus").click(function(e){
 		firebase.once("value",function(snapshot){
 			firebase.child("x").set(snapshot.val().x+1);
