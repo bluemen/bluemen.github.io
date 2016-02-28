@@ -27,6 +27,7 @@ $(document).ready(function(){
 		if(clear % 5 == 0){
 			clearBoard();
 			console.log("hishi");
+			firebase.child("clear").set(snapshot.val().clear+1);
 		}
 	});
 
