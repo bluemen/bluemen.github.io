@@ -9,4 +9,9 @@ $(document).ready(function(){
 		firebase.push(thing);
 		console.log("hi");
 	});
+
+	$("#clearserver").click(function(e){
+		e.preventDefault();
+		firebase.remove();
+	})
 })
