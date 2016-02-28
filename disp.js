@@ -6,23 +6,28 @@ $(document).ready(function(){
 		$("#placeholder").prepend(para);
 	}
 
-	// firebase.on("child_added", function(snapshot){
-	// 	var input = snapshot.val().username;
-	// 	update(input);
-	// });
-
 	function drawRect(x,y,width,height,color){
 		var canvas = document.getElementById("play");
 		var ctx = canvas.getContext("2d");
 		ctx.fillStyle = color;
-		ctx.clearRect(0,0,canvas.width,canvas.height);
 		ctx.fillRect(x-width/2,y-height/2,width,height);
+	}
+
+	function clearBoard(){
+		var canvas = document.getElementById("play");
+		var ctx = canvas.getContext("2d");
+		ctx.clearRect(0,0,canvas.width,canvas.height);
 	}
 
 	firebase.on("value",function(snapshot){
 		var x = snapshot.val().x;
 		var y = snapshot.val().y;
 		drawRect(x,y,4,4,"#FF0000");
+		var clear = snapshot.val().clear;
+		if(clear % 5 == 0){
+			clearBoard();
+			console.log("hishi");
+		}
 	});
 
 	$("#removeall").click(function(e){

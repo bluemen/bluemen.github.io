@@ -34,4 +34,9 @@ $(document).ready(function(){
 			firebase.child("y").set(snapshot.val().y-1);
 		})
 	});
+	$("#clear").click(function(e){
+		firebase.once("value",function(snapshot){
+			firebase.child("clear").set(snapshot.val().clear+1);
+		});
+	});
 })
